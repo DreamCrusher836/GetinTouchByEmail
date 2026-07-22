@@ -101,6 +101,7 @@ form.addEventListener('submit', event => {
     .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data)
     .then(() => {
       alert(`Thanks, ${data.name}! A confirmation email is on its way to ${data.email}.`);
+      console.log('Email sent successfully:', data);
       form.reset();
       nameInput.focus();
     })
