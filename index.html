@@ -8,6 +8,78 @@
 </head>
 <body>
   <main class="page">
+    <!-- Decorative background art. Purely visual, so hidden from
+         assistive tech and non-interactive (pointer-events off). -->
+    <div class="decor" aria-hidden="true">
+      <!-- Sun, top-left -->
+      <svg class="deco deco-sun" viewBox="0 0 120 120" fill="none">
+        <g stroke="#f5b301" stroke-width="6" stroke-linecap="round">
+          <line x1="60" y1="6" x2="60" y2="22" />
+          <line x1="60" y1="98" x2="60" y2="114" />
+          <line x1="6" y1="60" x2="22" y2="60" />
+          <line x1="98" y1="60" x2="114" y2="60" />
+          <line x1="21" y1="21" x2="33" y2="33" />
+          <line x1="87" y1="87" x2="99" y2="99" />
+          <line x1="99" y1="21" x2="87" y2="33" />
+          <line x1="33" y1="87" x2="21" y2="99" />
+        </g>
+        <circle cx="60" cy="60" r="24" fill="#fcd34d" stroke="#f5b301" stroke-width="5" />
+      </svg>
+
+      <!-- Envelope, top-right -->
+      <svg class="deco deco-mail deco-mail-1" viewBox="0 0 120 90" fill="none">
+        <rect x="4" y="8" width="112" height="74" rx="10" fill="#ffffff" stroke="#818cf8" stroke-width="5" />
+        <path d="M8 16 L60 52 L112 16" fill="none" stroke="#818cf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Envelope, lower-left -->
+      <svg class="deco deco-mail deco-mail-2" viewBox="0 0 120 90" fill="none">
+        <rect x="4" y="8" width="112" height="74" rx="10" fill="#ffffff" stroke="#a5b4fc" stroke-width="5" />
+        <path d="M8 16 L60 52 L112 16" fill="none" stroke="#a5b4fc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Flower, left -->
+      <svg class="deco deco-flower deco-flower-1" viewBox="0 0 120 140" fill="none">
+        <line x1="60" y1="60" x2="60" y2="134" stroke="#34d399" stroke-width="6" stroke-linecap="round" />
+        <path d="M60 96 q-22 -6 -30 10 q22 6 30 -10Z" fill="#34d399" />
+        <g fill="#f9a8d4">
+          <circle cx="60" cy="34" r="15" />
+          <circle cx="34" cy="52" r="15" />
+          <circle cx="44" cy="80" r="15" />
+          <circle cx="76" cy="80" r="15" />
+          <circle cx="86" cy="52" r="15" />
+        </g>
+        <circle cx="60" cy="60" r="13" fill="#fcd34d" />
+      </svg>
+
+      <!-- Flower, lower-right -->
+      <svg class="deco deco-flower deco-flower-2" viewBox="0 0 120 140" fill="none">
+        <line x1="60" y1="60" x2="60" y2="134" stroke="#34d399" stroke-width="6" stroke-linecap="round" />
+        <path d="M60 100 q22 -6 30 10 q-22 6 -30 -10Z" fill="#34d399" />
+        <g fill="#c4b5fd">
+          <circle cx="60" cy="34" r="15" />
+          <circle cx="34" cy="52" r="15" />
+          <circle cx="44" cy="80" r="15" />
+          <circle cx="76" cy="80" r="15" />
+          <circle cx="86" cy="52" r="15" />
+        </g>
+        <circle cx="60" cy="60" r="13" fill="#fbbf24" />
+      </svg>
+
+      <!-- Paper plane, Telegram-inspired but recolored + tweaked -->
+      <svg class="deco deco-plane" viewBox="0 0 120 120" fill="none">
+        <circle cx="60" cy="60" r="56" fill="url(#planeGrad)" />
+        <path d="M30 58 L92 34 L80 90 L64 74 L52 84 L50 68 Z" fill="#ffffff" />
+        <path d="M52 84 L52 68 L80 90 Z" fill="#d6e6f5" />
+        <defs>
+          <linearGradient id="planeGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#38bdf8" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
     <section class="card" aria-labelledby="form-heading">
       <h1 id="form-heading">Get in touch</h1>
       <p class="subtext">Have a question or just want to say hello? Send us a message.</p>
