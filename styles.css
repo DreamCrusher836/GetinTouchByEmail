@@ -1,0 +1,188 @@
+/* ============================================================
+   Base + system font stack
+   Reset default margins and apply a native system font so no
+   external fonts are needed.
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #1f2937;
+}
+
+/* ============================================================
+   Page layout
+   Center the card both vertically and horizontally over a
+   soft gradient background. Padding keeps the card off the
+   screen edges on small viewports.
+   ============================================================ */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+}
+
+/* ============================================================
+   Card
+   White surface with rounded corners, soft shadow, and
+   comfortable padding. Constrained to a readable max-width.
+   ============================================================ */
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 32px;
+}
+
+/* ============================================================
+   Heading + subtext
+   ============================================================ */
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.subtext {
+  margin: 0 0 24px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   Fields
+   Stack each label + input vertically with consistent spacing.
+   ============================================================ */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   Inputs + textarea
+   Full width, consistent padding, rounded borders, readable
+   font size. Smooth transitions on border/shadow for focus.
+   ============================================================ */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+/* ============================================================
+   Focus state
+   Accent border plus a subtle glow so keyboard users can
+   clearly see which field is active.
+   ============================================================ */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* ============================================================
+   Invalid state
+   Red border toggled by JS on fields that fail validation.
+   ============================================================ */
+input.invalid,
+textarea.invalid {
+  border-color: #ef4444;
+}
+
+input.invalid:focus,
+textarea.invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* ============================================================
+   Error text
+   Small and red. Only takes up space when it actually has
+   content (empty spans stay hidden).
+   ============================================================ */
+.error {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.error:empty {
+  display: none;
+}
+
+/* ============================================================
+   Submit button
+   Full width, solid accent color, pointer cursor, with hover
+   and active states plus a smooth color transition.
+   ============================================================ */
+.submit-btn {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #6366f1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.submit-btn:hover {
+  background: #4f46e5;
+}
+
+.submit-btn:active {
+  background: #4338ca;
+  transform: translateY(1px);
+}
+
+.submit-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}
+
+/* ============================================================
+   Responsive
+   On narrow screens, tighten the card padding so more room
+   goes to the form itself while keeping breathing room at
+   the edges.
+   ============================================================ */
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
